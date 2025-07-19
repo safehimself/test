@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แกลเลอรี่รูปน่ารักๆ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ดาวตกหัวใจตกแต่ง -->
+    <div id="cuteStars"></div>
+    <div class="main-container">
+        <div class="gallery-card">
+            <h1>รูปน่าร๊ากกน่าร้ากก 💖</h1>
+            <div class="divider-heart">♡.｡.:*☆.｡.:*♡</div>
+            <div class="gallery-grid">
+                <!-- ใส่ลิงก์และ url รูปตามต้องการ -->
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/รูปใคร.jpg" alt="รูป1">
+                    <div class="caption">รูปใคร?</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/รูปตัวอะไร.jpg" alt="รูป2">
+                    <div class="caption">รูปตัวอะไร?</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/รูปเปิดตัว.jpg" alt="รูป3">
+                    <div class="caption">รูปเปิดตัวรึเปล่านาาา</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/ชอบที่สุด.jpeg" alt="รูป4">
+                    <div class="caption">รูปที่ข้าชอบที่สุด</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/น่ารักที่สุด.jpeg" alt="รูป5">
+                    <div class="caption">รูปที่น่ารักที่สุดสำหรับข้า</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/รูปคู่ที่ชอบ.jpeg" alt="รูป6">
+                    <div class="caption">รูปคู่ที่ชอบ</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/รูปคู่ที่น่ารัก.jpeg" alt="รูป7">
+                    <div class="caption">รูปคู่ที่น่ารัก</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/น่ารัะห2.jpeg" alt="รูป8">
+                    <div class="caption">อันนี้ก็น่ารัก</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/ใครนะ.jpeg" alt="รูป8">
+                    <div class="caption">อันนี้ใคร</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/ผีหลอก.jpeg" alt="รูป8">
+                    <div class="caption">เห้ยผีหลอก</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/ผีหลอกอีกแล้ว.jpeg" alt="รูป8">
+                    <div class="caption">เอ้ยมันหลอกอีกแล้ว</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../Our Website/cheer/น่ารักมากๆ.jpeg" alt="รูป8">
+                    <div class="caption">ร้องไห้ยังน่ารัก</div>
+                </div>
+                <!-- เพิ่มรูปได้เรื่อยๆ -->
+            </div>
+            <a href="index.html" class="back-btn">กลับหน้าอวยพร 💌</a>
+        </div>
+    </div>
+    <footer>
+        <span>♡ รวมความทรงจำดี ๆ สำหรับคุณ ♡</span>
+    </footer>
+    <script>
+        // ดาวตกหัวใจ (แอนิเมชันเหมือนหน้าอวยพร)
+        function spawnStar() {
+            const star = document.createElement('div');
+            star.className = Math.random() > 0.45 ? 'shooting-star heart' : 'shooting-star star';
+            document.getElementById('cuteStars').appendChild(star);
+
+            star.style.left = Math.random()*95+'vw';
+            var duration = 2 + Math.random()*1.5;
+            star.style.animationDuration = duration+'s';
+            star.style.top = (10 + Math.random()*65)+'vh';
+
+            setTimeout(() => {
+                star.remove();
+            }, duration*1000+900);
+        }
+        setInterval(spawnStar, 1100);
+    </script>
+</body>
+</html>

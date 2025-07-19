@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>วันเกิดอ่ายยเบบี๋</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- ดาวตกหัวใจตกแต่ง -->
+    <div id="cuteStars"></div>
+    <div class="main-container">
+        <div class="birthday-card">
+            <div class="cute-balloon"></div>
+            <h1>สุขสันต์วันเกิดนะคับบะบี๋ </h1>
+            <div class="cake-animation"></div>
+            <div class="divider-heart">♡.｡.:*☆.｡.:*♡</div>
+            <div class="greeting-box">
+                <p>
+                    รักเบบี๋มากๆเลยนะคับ ปีนี้อายุ 20 แล้ววโตอีกปีแล้วนะคับ อายุขึ้นเลข 2 แย้วววว ขอให้เธอมีความสุขมากๆนะคับ ไม่เจ็บไม่ป่วยนาาคับบ 
+        หรือถ้าป่วยหรือเป็นอะไรก็บอกเค้านะคับเค้ารักเธอมากๆเลยนะคับ เค้าสัญญาว่าจะรักเธอไปเรื่อยๆจนแก่เบยยยยย จุ๊บๆๆๆ
+                    <span class="small-heart">⁎.⋆♡ ตลอดไปเลย ♡⋆.⁎</span>
+                </p>
+            </div>
+            <button class="gallery-btn" id="viewGalleryBtn">ไปดูรูปน่ารักๆ</button>
+        </div>
+    </div>
+    <!--ของตกแต่ง--> 
+    <div class="decoration">
+        <div class="sunflower">
+        <img src="../Our Website/img/Sunflower.png" height="200" width="200">
+        </div>
+        <div class="gypso">
+        <img src="../Our Website/img/gypso.png" height="200" width="200">
+        </div>
+        <div class="safe">
+        <img src="../Our Website/img/safe.png" height="210" width="210">
+        </div>
+        <div class="cheer">
+        <img src="../Our Website/img/cheer.png" height="200" width="200">
+        </div>
+        <div class="cake">
+        <img src="../Our Website/img/cake.png" height="200" width="200">
+        </div>
+        
+    </div>
+    
+    
+    <footer>
+        <span>🌸 รักเธอตลอดไปเลยยยยยยย 🌸</span>
+    </footer>
+    <script>
+        // เปิดอัลบั้มรูป
+        document.getElementById('viewGalleryBtn').onclick = function() {
+            window.open('img page.html', '_blank'); // เปลี่ยนลิงก์ที่นี่
+        };
+        // เพิ่มไฟเปลวเทียนบนเค้ก
+        const flame = document.createElement('div');
+        flame.className = "flame";
+        document.querySelector('.cake-animation').appendChild(flame);
+
+        // ดาวน่ารักๆ
+        function spawnStar() {
+            const star = document.createElement('div');
+            star.className = Math.random() > 0.45 ? 'shooting-star heart' : 'shooting-star star';
+            document.getElementById('cuteStars').appendChild(star);
+
+            star.style.left = Math.random()*95+'vw';
+            var duration = 2 + Math.random()*1.5;
+            star.style.animationDuration = duration+'s';
+            // ตำแหน่งบินตก
+            star.style.top = (10 + Math.random()*60)+'vh';
+
+            setTimeout(() => {
+                star.remove();
+            }, duration*1000+1000);
+        }
+        setInterval(spawnStar, 1100);
+        
+    </script>
+</body>
+</html>
